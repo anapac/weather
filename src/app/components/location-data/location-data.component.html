@@ -1,0 +1,30 @@
+<div [ngClass]="locationDataClasses">
+  <div id="x" (click)="closeLocations()">X</div>
+
+  <div class="headings">
+    <h2 id="locName">{{locData.name}}</h2>
+    <h3 id="locRegion">{{locData.region}} ({{locData.country}})</h3>
+  </div>
+
+  <div id="coords">
+    <div class="label">Coordinates</div>
+    <div class="data">
+      lat: <span class="data-item">{{locData.lat}}</span>
+      lon: <span class="data-item">{{locData.lon}}</span>
+    </div>
+  </div>
+
+  <div id="localTime">
+    <div class="label">Local time</div>
+    <div class="data">
+      <span class="data-item">{{locData.localtime}}</span>
+    </div>
+  </div>
+
+  <div id="timeZone">
+    <div class="label">Time zone</div>
+    <div class="data">
+      <span class="data-item">{{locData.tz_id}}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div id="div-userForm" [ngClass]="userFormClasses || null">
+  <form id="userForm" (ngSubmit)="submitForm($event); userForm.reset()" #userForm="ngForm">
+    <div class="userFormLocationContainer">
+      <label for="locationInput">Location </label>
+      <input id="locationInput" type="text" name="locationInput" required autofocus
+        [(ngModel)]="loc" #spy />
+    </div>
+    <!-- {{spy.className}} -->
+    <div class="userFormBtnContainer">
+      <button type="submit">Find</button>
+    </div>
+  </form>
+</div>

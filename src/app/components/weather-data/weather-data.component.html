@@ -1,0 +1,41 @@
+<div [ngClass]="weatherDataClasses">
+  <div id="x" (click)="closeWeather()">X</div>
+
+  <div id="temperature">
+    <div class="label">Temperature</div>
+    <div class="data">
+      <span class="data-item">{{weatherData.temp_c}} &deg;C ({{weatherData.temp_f}} &deg;F)</span>
+      <span class="data-item"> feels like {{weatherData.feelslike_c}} &deg;C ({{weatherData.feelslike_f}} &deg;F)</span>
+    </div>
+  </div>
+
+  <div id="conditions">
+    <div class="label">Conditions</div>
+    <div class="data">
+      <span class="data-item">{{weatherData.condition.text}}</span>
+      <img id="conditionIcon" src="{{weatherData.condition.icon}}">
+    </div>
+  </div>
+
+  <div id="wind">
+    <div class="label">Wind</div>
+    <div class="data">
+      <span class="data-item">{{weatherData.wind_kph}} km/h ({{weatherData.wind_mph}} mph)</span>
+      <span class="data-item"> from the {{weatherData.wind_dir}} ({{weatherData.wind_degree}}&deg;)</span>
+    </div>
+  </div>
+
+  <div id="pressure">
+    <div class="label">Pressure</div>
+    <div class="data">
+      <span class="data-item">{{weatherData.pressure_mb}} mb ({{weatherData.pressure_in}} in)</span>
+    </div>
+  </div>
+
+  <div id="precipitation">
+    <div class="label">Precipitation</div>
+    <div class="data">
+      <span class="data-item">{{weatherData.precip_mm}} mm ({{weatherData.precip_in}} in)</span>
+    </div>
+  </div>
+</div>

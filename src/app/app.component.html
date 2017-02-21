@@ -1,0 +1,16 @@
+<div id="wrapper">
+  <app-header [title]="title">[Header component]</app-header>
+
+  <app-user-form (onLocation)="searchWeatherApi($event)"></app-user-form>
+  <br />
+
+  <div class="data-blocks">
+    <app-location-data *ngIf="displayLocations" [locData]="locationData" (onHideLocations)="hideLocationData()"></app-location-data>
+    <app-weather-data *ngIf="displayWeather" [weatherData]="weatherData" (onHideWeather)="hideWeatherData()"></app-weather-data>
+  </div>
+</div>
+
+<footer>
+  <span id="copyright"></span>
+  <span class="contents">&copy; 2017 by anapac</span>
+</footer>
